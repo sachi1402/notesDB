@@ -11,7 +11,8 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "devStart": "npm nodemon index.js"
+    "devStart": "npm nodemon index.js",
+    "start": "node run ."
   },
   "keywords": [],
   "author": "",

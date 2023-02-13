@@ -1,5 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config()
 const app= express()
 app.use(cors());
 app.use(express.json())
@@ -33,4 +35,4 @@ app.put('/Notes/',async (req,res)=>{
     const note= await updateNote(title,contant,id)
     res.status(201).send(note)})
 
-app.listen(3000)
+app.listen(process.env.PORT ||3000)
